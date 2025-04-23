@@ -16,7 +16,7 @@ public class errorValidation extends BrowserIntialization {
     public void validate() {
         lg.loginWithCredentials("EmailId@gmail.com", "userPassword");
         Login ob = new Login(driver);
-        Assert.assertEquals("Incorrect email or password", ob.validateMessage());
+        Assert.assertEquals("Incorrect email or password.", ob.validateMessage());
     }
 
     @Test(groups = {"errorVd"}, retryAnalyzer= Retry.class )

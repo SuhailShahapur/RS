@@ -37,15 +37,17 @@ public class BrowserIntialization {
 
         if (BrowserName.contains("chrome")) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("headless");
+            //options.addArguments("headless");
             if(BrowserName.equalsIgnoreCase("headless")){
                 options.addArguments("headless");
-                driver.manage().window().maximize();
+
+               // driver.manage().window().maximize();
 
             }
             driver = new ChromeDriver(options);
         } else if (BrowserName.equalsIgnoreCase("Edge")) {
             driver = new EdgeDriver();
+
 
         } else if (BrowserName.equalsIgnoreCase("fireFox")) {
             driver = new FirefoxDriver();
@@ -53,6 +55,7 @@ public class BrowserIntialization {
         }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 
     }
 
