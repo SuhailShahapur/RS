@@ -33,12 +33,12 @@ public class BrowserIntialization {
 
         ps.load(fs);
         String BrowserName = System.getProperty("browser")!=null?System.getProperty("browser"):ps.getProperty("browser");
-       // String BrowserName = ps.getProperty("browser");
+        //String BrowserName = ps.getProperty("browser");
 
         if (BrowserName.contains("chrome")) {
             ChromeOptions options = new ChromeOptions();
             //options.addArguments("headless");
-            if(BrowserName.equalsIgnoreCase("headless")){
+            if(BrowserName.contains("headless")){
                 options.addArguments("headless");
 
                // driver.manage().window().maximize();
