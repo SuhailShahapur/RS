@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE  suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/suhail.shahapur/IdeaProjects/RSSelenium">
+<suite name="All Test Suite" parallel="tests">
+    <listeners>
+        <listener class-name="TestComponents.Listeners"/>
+    </listeners>
+    <test thread-count="2" verbose="2" preserve-order="true" name="C:/Users/suhail.shahapur/IdeaProjects/RSSelenium">
         <classes>
             <class name="TestCases.FrameWorkP2">
                 <methods>
                     <include name="appTest"/>
-                    <include name="verifyPacedOrders"/>
+                    <include name="VerifyOrderPage"/>
                 </methods>
             </class>
             <class name="TestCases.errorValidation">
